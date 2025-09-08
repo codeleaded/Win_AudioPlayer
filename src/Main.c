@@ -1,10 +1,20 @@
 #include "/home/codeleaded/System/Static/Library/WindowEngine1.0.h"
+#include "/home/codeleaded/System/Static/Library/AudioPlayer.h"
+
+AudioPlayer ap;
 
 void Setup(AlxWindow* w){
-	
+	ap = AudioPlayer_New();
+	AudioPlayer_Start(&ap);
 }
 void Update(AlxWindow* w){
-	
+	if(Stroke(ALX_KEY_W).PRESSED){
+		AudioPlayer_Add(&ap,"./sound/coin.wav");
+	}
+	if(Stroke(ALX_KEY_S).PRESSED){
+		AudioPlayer_Add(&ap,"./sound/Beat.wav");
+	}
+
 	Clear(BLACK);
 
 	//String str = String_Format("MI:%d",nMaxIterations);
@@ -12,7 +22,7 @@ void Update(AlxWindow* w){
 	//String_Free(&str);
 }
 void Delete(AlxWindow* w){
-	
+	AudioPlayer_Free(&ap);
 }
 
 int main(){

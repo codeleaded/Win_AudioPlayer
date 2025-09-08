@@ -1,8 +1,8 @@
 CC = gcc
 #CFLAGS = -Wall -Wextra -std=c11 -O2 -g -mavx2
-CFLAGS = -O2 -mavx2
+CFLAGS = -O0 -mavx2
 INCLUDES = -Isrc
-LDFLAGS = -lm -lX11 -lpng
+LDFLAGS = -lm -lX11 -lpng -lasound
 
 SRC_DIR = src
 BUILD_DIR = build
