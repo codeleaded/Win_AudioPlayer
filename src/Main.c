@@ -12,7 +12,13 @@ void Update(AlxWindow* w){
 		AudioPlayer_Add(&ap,"./sound/coin.wav");
 	}
 	if(Stroke(ALX_KEY_S).PRESSED){
-		AudioPlayer_Add(&ap,"./sound/Beat.wav");
+		AudioPlayer_Add(&ap,"./sound/beat.wav");
+	}
+	if(Stroke(ALX_KEY_A).PRESSED){
+		AudioPlayer_Add(&ap,"./sound/endleveldone.wav");
+	}
+	if(Stroke(ALX_KEY_D).PRESSED){
+		AudioPlayer_Add(&ap,"./sound/explosion.wav");
 	}
 
 	Clear(BLACK);
